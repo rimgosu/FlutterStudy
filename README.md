@@ -2,6 +2,8 @@
 
 ![image](https://github.com/rimgosu/FlutterStudy/assets/120752098/05e48dd7-ea62-44eb-a313-7a75eb370ef2)
 
+
+## Dart 기본 문법
 ### 자료형
 #### var를 사용한 변수 선언
 
@@ -122,3 +124,45 @@ void main() {
   print(status);
 }
 ```
+
+
+### null 관련 연산자
+
+- null은 아무 값도 없을 뜻한다. 0과 다르다. 
+
+- 따라서 변수에 null 값을 저장하면 오류가 난다.
+
+- 타입 뒤에 ? 표시를 추가해서 null 값을 가질 수 있다.
+```
+void main() {
+  double? number1; //ok
+  print(number1);
+  double number2 = null; //error
+}
+```
+- null 을 가질 수 있는 변수에 새로운 값을 추가할 때 ??를 사용하면 기존에 null인 때만 값이 저장된다.
+
+```
+void main() {
+  double? number;
+  print(number);
+  number ??= 1;
+  print(number);
+  number ??= 2;
+  print(number);
+}
+```
+
+
+#### 타입 비교 연산자
+
+```
+void main() {
+  int num = 1;
+  print(num is int); 
+  print(num is String);
+  print(num is! int);
+  print(num is! String);
+}
+```
+
