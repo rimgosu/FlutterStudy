@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +16,11 @@ class HomeScreen extends StatelessWidget {
         // ➍ 가운데 정렬
         centerTitle: true,
       ),
-      body: Text('Home Screen'),
+      body: WebView(
+        initialUrl: 'https://www.skttechacademy.com/',
+        javascriptMode: JavascriptMode.unrestricted,
+      ),
+
     );
   }
 }
